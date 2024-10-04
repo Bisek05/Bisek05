@@ -1,0 +1,31 @@
+#include <iostream>
+int main()
+{
+	const int N = 10;
+	int number [N];
+	int sumPositive = 0;
+	int countNegative = 0;
+	
+	std::cout << "Введите 10 чисел\n";
+	for (int i = 0; i < N; ++i) 
+	{
+		std::cin >> number [i];
+	}
+	
+	for (int i = 0; i < N; ++i)
+{
+	if (number [i] > 0) 
+	{
+		sumPositive += number [i];
+	}
+	else if (number[i] < 0)
+	{
+		countNegative++;
+	}
+	
+	}
+std::cout << "Сумма положительных чисел: " << sumPositive << std::endl;
+std::cout << "Количество отрицательных чисел: " << countNegative << std::endl;
+
+return 0;
+}
